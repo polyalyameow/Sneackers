@@ -24,7 +24,8 @@ export const MobileIcon = styled.div`
 `
 
 export const Nav = styled.nav`
-    width: 1110px;
+   
+    
     height: 50px;   
     display: flex;
     flex-direction: row;
@@ -34,6 +35,7 @@ export const Nav = styled.nav`
 `
 export const NavbarContainer = styled.div`
     max-width: 620px;
+    width: 100%;
     max-height: 50px;
     display: flex;
     flex-direction: row;

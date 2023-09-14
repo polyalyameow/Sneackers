@@ -1,0 +1,36 @@
+.container{
+    border: 2px solid red;
+    width: 445px;
+    height: 565px;
+    margin-left: 40px;
+    margin: 0;
+}
+
+.container__image{
+    border-radius: 15px;
+    margin-bottom: 28px;
+    height: 445px;
+    width: 445px;
+}
+
+.container__thumbnail{
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.thumbnail img {
+    border-radius: 10px;
+    height: 86px;
+    width: 86px;
+    
+}
+
+.clicked{
+   
+  
+   border: 2px solid #FF7E1B;
+   
+
+}
+
