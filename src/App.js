@@ -1,4 +1,4 @@
-import Navbar from "./components/navbar/Navbar.js";
+import Navbar from "./components/Navbar/Navbar";
 import './App.css';
 import Product from "./components/product/Product.js";
 
