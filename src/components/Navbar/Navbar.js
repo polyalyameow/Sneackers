@@ -1,46 +1,34 @@
 import React from 'react';
-import { FaBars } from "react-icons/fa";
+import "./Navbar.css"
+import logo from ".././../images/logo.svg";
+import  avatar from "../../images/image-avatar.jpg";
+import basket from "../../images/icon-cart.svg";
 
-import {
-    Nav,
-    NavbarContainer,
-    NavLogo,
-    NavSvgIcon,
-    MobileIcon,
-    NavMenu,
-    NavLink,
-    NavbarInfo,
-    NavBasket,
-    NavAvatar
-} from "./NavbarElements";
 
 const Navbar = () => {
   return (
-    <>
-    
-    <Nav>
-    <NavbarContainer>
-          <NavLogo to="/">
-            <NavSvgIcon />
-          </NavLogo>
-          {/* adding mobile icon */}
-          <MobileIcon>
-            <FaBars /> {/*icons from react icons*/}
-          </MobileIcon>
-          <NavMenu> 
-            <NavLink to="collections">Collections</NavLink>
-            <NavLink to="men">Men</NavLink>
-            <NavLink to="women">Women</NavLink>
-            <NavLink to="about">About</NavLink>
-            <NavLink to="contact">Contact</NavLink>
-          </NavMenu>
-        </NavbarContainer>
-        <NavbarInfo>
-            <NavBasket />
-            <NavAvatar />
-        </NavbarInfo>
-    </Nav>
-    </>
+    <nav className='nav'>
+      <div className='nav__container'>
+        <div className='nav__logo'>
+          <img className='logo__icon' src={logo}/>
+        </div>
+         {/* adding mobile icon */}
+        <div className='mobileIcon'>
+          <i></i>
+        </div>
+        <ul className='nav__menu'>
+          <li className='menu__item'>Collections</li>
+          <li className='menu__item'>Men</li>
+          <li className='menu__item'>Women</li>
+          <li className='menu__item'>About</li>
+          <li className='menu__item'>Contact</li>
+        </ul>
+        </div>
+        <div className='nav__info'>
+          <img className='info__basket' src={basket} />
+          <img className='info__avatar' src={avatar}/>
+        </div> 
+    </nav>
   )
 }
 

@@ -37,8 +37,8 @@ const Product = () => {
     <div className='container__thumbnail'>
       {images.map((data,i)=>
       <div className="thumbnail" key={i} >
-        <img className={collection.id==i?"clicked":""} src={data.value} onClick={()=>handleClick(i)} />
-      </div>
+       <img className={collection.id==i?"clicked":""} src={data.value} onClick={()=>handleClick(i)}/>
+       </div>
       )}
     </div>
   </div>

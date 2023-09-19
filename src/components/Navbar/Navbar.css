@@ -1,0 +1,94 @@
+.nav{
+    width: 80%;
+    height: 50px;   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid yellow;
+    margin-top: 28px;
+}
+
+.nav__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*LOGO*/
+.nav__logo{
+    cursor: pointer;
+    /* border: 2px solid red; */
+}
+
+.logo__icon{
+    height: 20px;  
+    width: 137.5px;
+}
+
+/*MOBILE*/
+.mobileIcon{
+    display: none;
+}
+
+/*NAV UL*/
+.nav__menu{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+.menu__item{
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Kumbh Sans', sans-serif;;
+    font-size: 15px;
+    line-height: 26px;
+    color: #69707D;
+    transition: all 0.2s ease-in-out;
+    /* border: 1px solid fuchsia; */
+    align-self: center;
+    padding-right: 33px;
+}
+
+.menu__item:hover{
+    transition: all 0.2s ease-in-out;
+    text-decoration: underline #FF7E1B;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 41px;
+    color: black;
+}
+
+/*BASKET + AVATAR*/
+.nav__info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100px;
+    justify-content: space-between;
+}
+
+.info__basket{
+    height: 20px;  
+    width: 21.82px;
+    transition: all 0.2s ease-in-out;
+    
+}
+
+.info__basket:hover{
+    filter:  contrast(1000%);
+    transition: all 0.2s ease-in-out;
+}
+
+.info__avatar{
+    height: 50px;  
+    width: 50px;
+    transition: all 0.1s ease-in-out;
+}
+
+.info__avatar:hover{
+    transition: all 0.1s ease-in-out;
+    border: 2px solid #FF7E1B;
+    border-radius: 50%;
+}
