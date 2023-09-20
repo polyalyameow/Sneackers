@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import basket from "../../images/icon-cart.svg";
+import {CounterContext} from '../Counter/Counter';
 
 const AddButton = () => {
+    const value = useContext(CounterContext); 
+
   return (
-    <button>Add to cart <img src={basket}/></button>
+    <CounterContext.Consumer>
+        <button onClick={console.log(value)}>Add to cart <img src={basket}/></button>
+    </CounterContext.Consumer>
   )
 }
 

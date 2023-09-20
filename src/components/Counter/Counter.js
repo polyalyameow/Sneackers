@@ -1,4 +1,7 @@
-import React, {useState} from 'react'
+import React, {useState, createContext} from 'react';
+
+
+export const CounterContext = createContext();
 
 const Counter = () => {
     const [counter, setCounter] = useState(0)
@@ -16,12 +19,14 @@ const Counter = () => {
     }
 
   return (
+    <CounterContext.Provider value={counter}>
     <div className='counter'>
         <button onClick={() => handleDecrement()}>-</button>
         {counter}
         <button onClick={() => handleIncrement()}>+</button>
     </div>
+    </CounterContext.Provider>
   )
 }
 
-export default Counter
+export default Counter;
