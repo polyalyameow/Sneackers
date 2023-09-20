@@ -1,11 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Navbar.css"
 import logo from ".././../images/logo.svg";
 import  avatar from "../../images/image-avatar.jpg";
 import basket from "../../images/icon-cart.svg";
+import { useBetween } from 'use-between';
+import {useShareableButtonState} from "../AddButton/AddButton"
 
 
 const Navbar = () => {
+  const { addCounter, setAddCounter } = useBetween(useShareableButtonState);
+
+  const [show, setShow] = useState(false);
+
+
+
   return (
     <nav className='nav'>
       <div className='nav__container'>
@@ -25,7 +33,8 @@ const Navbar = () => {
         </ul>
         </div>
         <div className='nav__info'>
-          <img className='info__basket' src={basket} />
+          <img id="basket" src={basket} onClick={() => setShow(prev => !prev)} />
+          {show && <div className='show-block'><p className='cart-name'>cart</p>{addCounter>0 ? `${addCounter}` : "Your cart is empty"}</div>}
           <img className='info__avatar' src={avatar}/>
         </div> 
     </nav>

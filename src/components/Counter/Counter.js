@@ -1,19 +1,19 @@
-import React, {useState, createContext} from 'react';
+import React, {useState} from 'react';
 import { useBetween } from 'use-between';
 
-const useShareableState = () => {
-    const [counter, setCounter] = useState(0);
-    return {
-      counter,
-      setCounter
-    }
-  }
-  
 
+export const useShareableState = () => {
+  const [counter, setCounter] = useState(0)
+  return {
+    counter, setCounter
+  };
+};
 
 const Counter = () => {
     // const [counter, setCounter] = useState(0)
     const { counter, setCounter } = useBetween(useShareableState);
+
+   
 
     const handleDecrement = () =>{
         if (counter === 0){
