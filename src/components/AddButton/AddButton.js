@@ -1,14 +1,16 @@
 import React, {useContext} from 'react'
 import basket from "../../images/icon-cart.svg";
-import {CounterContext} from '../Counter/Counter';
+import { useBetween } from 'use-between';
+
+
 
 const AddButton = () => {
-    const value = useContext(CounterContext); 
+  const { count, setCount } = useBetween(useShareableState);
 
   return (
-    <CounterContext.Consumer>
-        <button onClick={console.log(value)}>Add to cart <img src={basket}/></button>
-    </CounterContext.Consumer>
+    
+        <button onClick={console.log({counter})}>Add to cart <img src={basket}/></button>
+    
   )
 }
 

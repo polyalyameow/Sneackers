@@ -1,10 +1,19 @@
 import React, {useState, createContext} from 'react';
+import { useBetween } from 'use-between';
 
+const useShareableState = () => {
+    const [counter, setCounter] = useState(0);
+    return {
+      counter,
+      setCounter
+    }
+  }
+  
 
-export const CounterContext = createContext();
 
 const Counter = () => {
-    const [counter, setCounter] = useState(0)
+    // const [counter, setCounter] = useState(0)
+    const { counter, setCounter } = useBetween(useShareableState);
 
     const handleDecrement = () =>{
         if (counter === 0){
@@ -19,13 +28,15 @@ const Counter = () => {
     }
 
   return (
-    <CounterContext.Provider value={counter}>
     <div className='counter'>
-        <button onClick={() => handleDecrement()}>-</button>
-        {counter}
-        <button onClick={() => handleIncrement()}>+</button>
+        
+            <button onClick={() => handleDecrement()}>-</button>
+            
+            { counter }
+            
+            <button onClick={() => handleIncrement()}>+</button>
+        
     </div>
-    </CounterContext.Provider>
   )
 }
 
