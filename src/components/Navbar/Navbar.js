@@ -34,7 +34,7 @@ const Navbar = () => {
         </div>
         <div className='nav__info'>
           <img id="basket" src={basket} onClick={() => setShow(prev => !prev)} />
-          {show && <div className='show-block'><p className='cart-name'>cart</p>{addCounter>0 ? `${addCounter}` : "Your cart is empty"}</div>}
+          {show && <div className='show-block'><p className='cart-name'>cart</p>{addCounter>0 ? `${addCounter}`  : "Your cart is empty"}</div>}
           <img className='info__avatar' src={avatar}/>
         </div> 
     </nav>
