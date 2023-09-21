@@ -39,7 +39,11 @@ const Navbar = () => {
         </div>
         {data.map((item, i)=>
         <div className='nav__info' key={i}>
+          <div>
+          {addCounter>0 ? (<div className='basket-amount'>{addCounter}</div>) : null}
           <img id="basket" src={basket} onClick={() => setShow(prev => !prev)} />
+          
+          </div>
           {show && <div className='show-block'><p className='cart-name'>Cart</p>{addCounter>0 ? 
           (<div className='cart-content'>
             <div className='cart-content-show'>

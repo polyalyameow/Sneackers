@@ -1,5 +1,5 @@
 .nav{
-    width: 80%;
+    width: 70%;
     height: 50px;   
     display: flex;
     flex-direction: row;
@@ -73,7 +73,7 @@
     height: 20px;  
     width: 21.82px;
     transition: all 0.2s ease-in-out;
-    position: relative;
+    position: relative; 
     
 }
 
@@ -98,13 +98,30 @@
     width: 360px;
     height: 256px;
     position: absolute;
+    z-index: 100;
     top: 10%;
-    right: 7%;
+    right: 9%;
     box-shadow: 2px 2px 2px 2px #979797;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: white;
     
+}
+
+.basket-amount{
+    background-color: #FF7E1B;
+    position: absolute;
+    top: 4%;
+    right: 19%;
+    width: 19px;
+    height: 13px;
+    color: white;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    z-index: 300;
     
 }
 

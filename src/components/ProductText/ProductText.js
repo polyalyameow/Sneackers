@@ -24,10 +24,10 @@ const ProductText = () => {
                 <p>{item.text}</p>
                 <div className='price'>
                     <div className='price--now'>
-                        <p>{item.price}</p>
+                        <p>${item.price}</p>
                         <p>{item.sale}</p>
                     </div>
-                    <p>{item.oldPrice}</p>
+                    <p>${item.oldPrice}</p>
                 </div>
                 <div className='action'>
                     <Counter/>

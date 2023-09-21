@@ -2,5 +2,6 @@
     display: flex;
     justify-content: space-between;
     width: 1015px;
-    margin-top: 50px;
+    margin-top: 7%;
+    border: 2px solid pink;
 }
