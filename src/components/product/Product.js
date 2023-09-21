@@ -6,25 +6,43 @@ import img2 from "../../images/image-product-2.jpg";
 import img3 from "../../images/image-product-3.jpg";
 import img4 from "../../images/image-product-4.jpg";
 
+import { useBetween } from 'use-between';
+
+const images = [
+  {id: 0, value: img1},
+  {id: 1, value: img2},
+  {id: 2, value: img3},
+  {id: 3, value: img4},
+]
+
+export const useShareableStateCollection = () => {
+  const [collection, setCollection]=useState(images[0])
+  return {
+    collection, setCollection
+  };
+};
+
 
 const Product = () => {
 
-  const images = [
-    {id: 0, value: img1},
-    {id: 1, value: img2},
-    {id: 2, value: img3},
-    {id: 3, value: img4},
-  ]
+  // const images = [
+  //   {id: 0, value: img1},
+  //   {id: 1, value: img2},
+  //   {id: 2, value: img3},
+  //   {id: 3, value: img4},
+  // ]
   
-  const [collection, setCollection]=useState(images[0])
+  // const [collection, setCollection]=useState(images[0])
+  const { collection, setCollection } = useBetween(useShareableStateCollection);
   const [val,setVal] = useState(0)
  
 
-  const handleClick=(index)=>{
-    console.log(index)
-    setVal(index)
-    const slider=images[index];
+  const handleClick=(i)=>{
+    console.log(i)
+    setVal(i)
+    const slider=images[i];
     setCollection(slider)
+    console.log(collection)
     
   }
 
