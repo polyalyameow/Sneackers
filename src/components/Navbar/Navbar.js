@@ -8,6 +8,8 @@ import { useBetween } from 'use-between';
 import {useShareableButtonState} from "../AddButton/AddButton"
 import {useShareableStateCollection} from "../product/Product"
 
+import {data} from "../ProductText/ProductText"
+
 
 const Navbar = () => {
   const { addCounter, setAddCounter } = useBetween(useShareableButtonState);
@@ -35,15 +37,16 @@ const Navbar = () => {
           <li className='menu__item'>Contact</li>
         </ul>
         </div>
-        <div className='nav__info'>
+        {data.map((item, i)=>
+        <div className='nav__info' key={i}>
           <img id="basket" src={basket} onClick={() => setShow(prev => !prev)} />
-          {show && <div className='show-block'><p className='cart-name'>cart</p>{addCounter>0 ? 
+          {show && <div className='show-block'><p className='cart-name'>Cart</p>{addCounter>0 ? 
           (<div className='cart-content'>
             <div className='cart-content-show'>
               <img className='cart-thumbnail' src={collection.value} />
               <div>
-                <p>Fall limited Edition Sneackers</p>
-                <p>$125 x {addCounter} <strong>${addCounter * 125}</strong></p>
+                <p>{item.title}</p>
+                <p>{item.price} x {addCounter} <strong>${addCounter * item.price}</strong></p>
               </div>
               <img className="remove" src={remove} onClick={() => setAddCounter(0)}/>
             </div>
@@ -51,6 +54,7 @@ const Navbar = () => {
           </div>)  : "Your cart is empty"}</div>}
           <img className='info__avatar' src={avatar}/>
         </div> 
+         )}
     </nav>
   )
 }

@@ -4,27 +4,38 @@ import AddButton from '../AddButton/AddButton'
 
 import "./ProductText.css"
 
+export const data = [{
+    logo: "Sneaker Company",
+    title: "Fall Limited Edition Sneakers",
+    text: "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.",
+    price: "125",
+    sale: "50%",
+    oldPrice: "250"
+  
+  }]
+
 const ProductText = () => {
     return (
         <>
-            <div className='main__text'>
-                <p>sneackers</p>
-                <h1>Fall Limited Edition Sneakers</h1>
-                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+            {data.map((item, i)=>
+            <div className='main__text' key={i}>
+                <p>{item.logo}</p>
+                <h1>{item.title}</h1>
+                <p>{item.text}</p>
                 <div className='price'>
                     <div className='price--now'>
-                        <p>$125</p>
-                        <p>50%</p>
+                        <p>{item.price}</p>
+                        <p>{item.sale}</p>
                     </div>
-                    <p>$250</p>
+                    <p>{item.oldPrice}</p>
                 </div>
                 <div className='action'>
                     <Counter/>
                     <AddButton />
                 </div>
             </div>
-
-        </>
+             )}
+        </> 
     )
 }
 
