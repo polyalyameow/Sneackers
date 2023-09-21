@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
 import { useBetween } from 'use-between';
+import "./Counter.css"
 
+import plus from "../../images/icon-plus.svg";
+import minus from "../../images/icon-minus.svg"
 
 export const useShareableState = () => {
   const [counter, setCounter] = useState(0)
@@ -30,11 +33,11 @@ const Counter = () => {
   return (
     <div className='counter'>
         
-            <button onClick={() => handleDecrement()}>-</button>
+            <button className='counter-btn'><img src={minus} onClick={() => handleDecrement()}/>
             
             { counter }
             
-            <button onClick={() => handleIncrement()}>+</button>
+            <img src={plus} onClick={() => handleIncrement()}/></button>
         
     </div>
   )

@@ -1,0 +1,26 @@
+.add-btn{
+    width: 250px;
+    height: 56px;
+    border-radius: 10px;
+    background-color: #FF7E1B;
+    border-color: #FF7E1B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: bold;
+}
+
+.add-btn:hover{
+    opacity: 0.8;
+}
+
+.add-btn img{
+    padding-right: 15px;
+}
+
+.basket{
+    filter: invert(96%) sepia(100%) saturate(1%) hue-rotate(12deg) brightness(104%) contrast(101%);
+}

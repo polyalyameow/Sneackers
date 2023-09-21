@@ -49,13 +49,13 @@ const Navbar = () => {
             <div className='cart-content-show'>
               <img className='cart-thumbnail' src={collection.value} />
               <div>
-                <p>{item.title}</p>
-                <p>{item.price} x {addCounter} <strong>${addCounter * item.price}</strong></p>
+                <p className='cart-title'>{item.title}</p>
+                <p className='cart-price'>{item.price} x {addCounter} <strong style={{color: 'black'}}>${addCounter * item.price}</strong></p>
               </div>
               <img className="remove" src={remove} onClick={() => setAddCounter(0)}/>
             </div>
-            <button>Checkout</button>
-          </div>)  : "Your cart is empty"}</div>}
+            <button className='cart-checkout'>Checkout</button>
+          </div>)  : <p className='empty-cart'>Your cart is empty</p>}</div>}
           <img className='info__avatar' src={avatar}/>
         </div> 
          )}

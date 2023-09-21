@@ -2,6 +2,7 @@ import React from 'react'
 import Counter from '../Counter/Counter'
 import AddButton from '../AddButton/AddButton'
 
+
 import "./ProductText.css"
 
 export const data = [{
@@ -19,15 +20,15 @@ const ProductText = () => {
         <>
             {data.map((item, i)=>
             <div className='main__text' key={i}>
-                <p>{item.logo}</p>
-                <h1>{item.title}</h1>
-                <p>{item.text}</p>
+                <p className='main__text--logo'>{item.logo}</p>
+                <h1 className='main__text--title'>{item.title}</h1>
+                <p className='main__text--text'>{item.text}</p>
                 <div className='price'>
                     <div className='price--now'>
-                        <p>${item.price}</p>
-                        <p>{item.sale}</p>
+                        <p className='price--now__price'>${item.price}</p>
+                        <p className='price--now__sale'>{item.sale}</p>
                     </div>
-                    <p>${item.oldPrice}</p>
+                    <p className='price--oldPrice'>${item.oldPrice}</p>
                 </div>
                 <div className='action'>
                     <Counter/>

@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import basket from "../../images/icon-cart.svg";
 import { useBetween } from 'use-between';
-import {useShareableState} from "../../components/Counter/Counter"
+import {useShareableState} from "../../components/Counter/Counter";
+
+import "./AddButton.css"
 
 
 export const useShareableButtonState = () => {
@@ -20,7 +22,7 @@ const AddButton = () => {
 
   return (
     
-        <button onClick={() => (setAddCounter(counter))}>Add to cart <img src={basket}/></button>
+        <button className='add-btn' onClick={() => (setAddCounter(counter))}><img src={basket} className='basket'/>Add to cart</button>
     
   )
 }
