@@ -1,8 +1,9 @@
 .container{
     border: 2px solid red;
-    width: 445px;
+    width: 500px;
     height: 565px;
-    margin-left: 40px;
+   
+    
     
 }
 
@@ -17,7 +18,7 @@
 .container__thumbnail{
     /* border: 2px solid green; */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .thumbnail img {
@@ -50,7 +51,7 @@
     justify-content: center;
     z-index: 9999;
     cursor: pointer;
-    border: 2px solid yellowgreen;
+    /* border: 2px solid yellowgreen; */
    
 }
 
@@ -58,3 +59,25 @@
    padding: 0 10px;
 }
 
+.container__main{
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.click{
+    filter: invert(65%) sepia(39%) saturate(5522%) hue-rotate(346deg) brightness(103%) contrast(103%);
+    
+}
+
+.btn-click{
+    border: 2px solid white;
+    border-color: #FF7E1B;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px; 
+    margin: -7%;
+    z-index: 10;
+    cursor: pointer;
+}
