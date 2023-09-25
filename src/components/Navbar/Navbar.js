@@ -10,9 +10,11 @@ import {useShareableStateCollection} from "../product/Product"
 
 import {data} from "../ProductText/ProductText"
 
+import OutsideClickHandler from 'react-outside-click-handler';
+
 
 const Navbar = () => {
-  const ref = useRef(null)
+
 
   const { addCounter, setAddCounter } = useBetween(useShareableButtonState);
 
@@ -20,31 +22,10 @@ const Navbar = () => {
 
   const { collection, setCollection } = useBetween(useShareableStateCollection);
 
-  useEffect(() => {
-    const docClick = (e) => {
-      if(ref.current.contains(e.target)){
-        return;
-      } 
-      setShow(false)
-    };
-    document.body.addEventListener("click", docClick, true);
-    return () => {
-      document.body.removeEventListener("click", docClick, true);
-    };
-  }, [])
-
-  
-  // const clickOutside = (e) => {
-  //   if(!refCart.current.contains(e.target)){
-  //     console.log("gotha")
-  //   } else {
-  //     console.log("something went wrong")
-  //   }
-  // }
 
   return (
     <nav className='nav' >
-      <div className='nav__container' ref={ref}>
+      <div className='nav__container'>
         <div className='nav__logo'>
           <img className='logo__icon' src={logo}/>
         </div>
@@ -62,12 +43,18 @@ const Navbar = () => {
         </div>
         {data.map((item, i)=>
         <div className='nav__info' key={i}>
-          <div ref={ref}>
+          <div>
           {addCounter>0 ? (<div className='basket-amount'>{addCounter}</div>) : null}
           <img id="basket" src={basket} onClick={() => setShow(prev => !prev)} />
           
           </div>
-          {show && (<div className='show-block' ><p className='cart-name' ref={ref}>Cart</p>{addCounter>0 ? 
+
+          {show && 
+          <OutsideClickHandler onOutsideClick={() => {
+            setShow(false);
+          }}>
+          
+          <div className='show-block'> <p className='cart-name'>Cart</p>{addCounter>0 ? 
           (<div className='cart-content'>
             <div className='cart-content-show'>
               <img className='cart-thumbnail' src={collection.value} />
@@ -78,8 +65,8 @@ const Navbar = () => {
               <img className="remove" src={remove} onClick={() => setAddCounter(0)}/>
             </div>
             <button className='cart-checkout'>Checkout</button>
-          </div>)  : <p className='empty-cart'>Your cart is empty</p>}</div>) }
-          
+          </div>)  : <p className='empty-cart'>Your cart is empty</p>}</div> </OutsideClickHandler> }
+         
           <img className='info__avatar' src={avatar}/>
         </div> 
          )}

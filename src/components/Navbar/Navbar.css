@@ -1,12 +1,12 @@
 .nav{
     width: 70%;
-    height: 50px;   
+    height: 3.125rem;   
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border: 2px solid yellow;
-    margin-top: 28px;
+    border: 0.125rem solid yellow;
+    margin-top: 1.75rem;
 }
 
 .nav__container{
@@ -23,8 +23,8 @@
 }
 
 .logo__icon{
-    height: 20px;  
-    width: 137.5px;
+    height: 1.25rem;  
+    width: 8.594rem;
 }
 
 /*MOBILE*/
@@ -43,20 +43,20 @@
     text-decoration: none;
     cursor: pointer;
     font-family: 'Kumbh Sans', sans-serif;
-    font-size: 15px;
-    line-height: 26px;
+    font-size: 0.938rem;
+    line-height: 1.625rem;
     color: #69707D;
     transition: all 0.2s ease-in-out;
     /* border: 1px solid fuchsia; */
     align-self: center;
-    padding-right: 33px;
+    padding-right: 2.063rem;
 }
 
 .menu__item:hover{
     transition: all 0.2s ease-in-out;
     text-decoration: underline #FF7E1B;
-    text-decoration-thickness: 3px;
-    text-underline-offset: 41px;
+    text-decoration-thickness: 0.188rem;
+    text-underline-offset: 2.563rem;
     color: black;
 }
 
@@ -65,13 +65,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 100px;
+    width: 6.25rem;
     justify-content: space-between;
 }
 
 #basket{
-    height: 20px;  
-    width: 21.82px;
+    height: 1.25rem;  
+    width: 1.364rem;
     transition: all 0.2s ease-in-out;
     position: relative; 
     filter: invert(53%) sepia(5%) saturate(25%) hue-rotate(91deg) brightness(93%) contrast(89%);
@@ -84,26 +84,26 @@
 }
 
 .info__avatar{
-    height: 50px;  
-    width: 50px;
+    height: 3.125rem;  
+    width: 3.125rem;
     transition: all 0.1s ease-in-out;
 }
 
 .info__avatar:hover{
     transition: all 0.1s ease-in-out;
-    border: 2px solid #FF7E1B;
+    border: 0.125rem solid #FF7E1B;
     border-radius: 50%;
 }
 
 /*CART BLOCK*/
 .show-block{
-    width: 360px;
-    height: 256px;
+    width: 22.5rem;
+    height: 16rem;
     position: absolute;
     z-index: 100;
     top: 10%;
     right: 9%;
-    box-shadow: 2px 2px 2px 2px #979797;
+    box-shadow: 0.125rem 0.125rem 0.125rem 0.125rem #979797;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -118,13 +118,13 @@
     position: absolute;
     top: 3.8%;
     right: 18.7%;
-    width: 19px;
-    height: 13px;
+    width: 1.188rem;
+    height: 0.813rem;
     color: white;
-    font-size: 10px;
+    font-size: 0.625rem;
     display: flex;
     justify-content: center;
-    border-radius: 15px;
+    border-radius: 0.938rem;
     z-index: 300;
     
 }
@@ -133,10 +133,10 @@
     margin-top: 7%;
     align-self: flex-start;
     color: #1D2026;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     /* border: 2px solid red; */
-    padding-left: 24px;
+    padding-left: 1.5rem;
     font-family: 'Kumbh Sans', sans-serif;
 
 }
@@ -144,7 +144,7 @@
 .empty-cart{
     color: #69707D;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
     margin-top: 20%;
    
 }
@@ -171,8 +171,8 @@
 }
 
 .remove{
-    width: 14px; 
-    height: 16px;
+    width: 0.875rem; 
+    height: 1rem;
     transition: all 0.2s ease-in-out;
     filter: invert(51%) sepia(0%) saturate(341%) hue-rotate(178deg) brightness(98%) contrast(85%);
 }
@@ -183,38 +183,38 @@
 }
 
 .cart-thumbnail{
-    width: 50px;
-    height: 50px;
-    border-radius: 4px;
+    width: 3.125rem;
+    height: 3.125rem;
+    border-radius: 0.25rem;
 }
 
 .cart-title{
     font-family: 'Kumbh Sans', sans-serif;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 1rem;
+    line-height: 1.625rem;
     color: #69707D;
     margin-bottom: 0;
 }
 
 .cart-price{
     font-family: 'Kumbh Sans', sans-serif;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 1rem;
+    line-height: 1.625rem;
     color: #69707D;
     margin-top: 0;
 }
 
 /*CHECKOUT BTN*/
 .cart-checkout{
-    width: 312px;
-    height: 56px;
-    border-radius: 10px;
+    width: 19.5rem;
+    height: 3.5rem;
+    border-radius: 0.625rem;
     border-color: #FF7E1B;
     background-color: #FF7E1B;
     color: white;
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .cart-checkout:hover{

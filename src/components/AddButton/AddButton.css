@@ -1,14 +1,14 @@
 .add-btn{
-    width: 250px;
-    height: 56px;
-    border-radius: 10px;
+    width: 15.625rem;
+    height: 3.5rem;
+    border-radius: 0.625rem;
     background-color: #FF7E1B;
     border-color: #FF7E1B;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: bold;
 }
@@ -18,7 +18,7 @@
 }
 
 .add-btn img{
-    padding-right: 15px;
+    padding-right: 0.938rem;
 }
 
 .basket{

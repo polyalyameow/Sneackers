@@ -1,13 +1,13 @@
 .counter-btn{
-   width: 157px;
-   height: 56px;
-   border: 1px solid #F6F8FD;
-   border-radius: 10px;
+   width: 9.813rem;
+   height: 3.5rem;
+   border: 0.063rem solid #F6F8FD;
+   border-radius: 0.625rem;
    display: flex;
    justify-content: space-around;
    align-items: center;
    background-color: #F6F8FD;
-   font-size: 16px;
+   font-size: 1rem;
    font-family: 'Kumbh Sans', sans-serif;
    font-weight: bold;
    color: #1D2026;
