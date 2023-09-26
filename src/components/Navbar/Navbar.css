@@ -233,9 +233,6 @@
     cursor: pointer;
 }
 
-.rootOpacity{
-    background-color: pink;
-}
 
 @media screen and (max-width: 415px) 
 {
@@ -308,4 +305,10 @@
         margin-top: 5%;
     }
 
+    .cart-checkout{
+        width: 1rem;
+    }
+    .info__avatar{
+        width: 2.8rem;
+    }
 }
