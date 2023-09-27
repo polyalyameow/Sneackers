@@ -110,3 +110,14 @@
         display: none;
     }
 }
+
+@media screen and (max-width: 281px) {
+    .btn-click{
+        width: 2.5rem;
+        height: 2.5rem;
+        margin: -3.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -98,6 +98,18 @@
     width: 27.813rem;
 }
 
+@media screen and (max-width: 1024px){
+    .main__text{
+        align-self: self-start;
+    }
+}
+
+@media screen and (max-width: 1023px){
+    .main__text{
+        align-self: center;
+    }
+}
+
 @media screen and (max-width: 539px){
     .main__text {
         width: 80%;
@@ -130,5 +142,11 @@
         justify-content: center;
         width: 100%;
         margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 281px){
+    .price--now{
+        width: 50%;
     }
 }

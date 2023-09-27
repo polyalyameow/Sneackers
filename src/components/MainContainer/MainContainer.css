@@ -5,6 +5,22 @@
     /* margin-top: 7%; */
     /* border: 0.125rem solid pink; */
 }
+@media screen and (max-width: 1024px){
+   .main{
+    margin-top: 4rem;
+   }
+}
+
+@media screen and (max-width: 912px){
+    .main{
+        flex-direction: column;
+        margin-top: 2rem;
+        align-items: center;
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+
+}
 
 @media screen and (max-width: 539px) {
     .main{
@@ -14,3 +30,4 @@
         width: 100%;
     }
 }
+
