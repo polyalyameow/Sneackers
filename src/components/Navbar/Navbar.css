@@ -106,7 +106,7 @@
 .show-block{
     width: 22.5rem;
     height: 16rem;
-    position: absolute;
+    position: fixed;
     z-index: 100;
     top: 4.375rem;
     right: 9%;

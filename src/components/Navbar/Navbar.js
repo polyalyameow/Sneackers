@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import "./Navbar.css";
 import logo from ".././../images/logo.svg";
 import avatar from "../../images/image-avatar.jpg";
@@ -7,6 +7,7 @@ import remove from "../../images/icon-delete.svg";
 import menu from "../../images/icon-menu.svg";
 import close from "../../images/icon-close.svg";
 import { useBetween } from "use-between";
+import {useShareableState} from "../../components/Counter/Counter";
 import { useShareableButtonState } from "../AddButton/AddButton";
 import { useShareableStateCollection } from "../product/Product";
 
@@ -14,19 +15,47 @@ import { data } from "../ProductText/ProductText";
 
 import OutsideClickHandler from "react-outside-click-handler";
 
-const Navbar = () => {
-  const [isDisabled, setDisabled] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
 
+
+
+
+const Navbar = () => {
+
+// sharable states
+const { counter, setCounter } = useBetween(useShareableState);
+const { addCounter, setAddCounter } = useBetween(useShareableButtonState);
+const { collection, setCollection } = useBetween(useShareableStateCollection);
+
+// to open mobile menu
+  const [isOpen, setIsOpen] = useState(false);
   const toggle = () => {
     setIsOpen((open) => !open);
   };
 
-  const { addCounter, setAddCounter } = useBetween(useShareableButtonState);
-
+// show cart
   const [show, setShow] = useState(false);
 
-  const { collection, setCollection } = useBetween(useShareableStateCollection);
+//close cart on scroll
+  useEffect(() => {   
+    window.addEventListener("scroll", listenToScroll, true);
+        return () => 
+       window.removeEventListener("scroll", listenToScroll, true); 
+  }, [])
+  
+  const listenToScroll = () => {
+    let heightToHideFrom = 10;
+    let winScroll = document.body.scrollTop;
+    console.log(winScroll)
+
+
+
+    if (winScroll > heightToHideFrom) {  
+        show && setShow(true)
+        } else {
+          setShow(false)
+        }
+  };
+
 
 
   return (
@@ -37,15 +66,11 @@ const Navbar = () => {
         <div className="mobileIcon" onClick={toggle}>
               <img src={isOpen ? close : menu} />
             
-              {/* <div className="close" onClick={toggle}>
-                <img src={close} />
-              </div> */}
 
           </div>
           <div className="nav__logo">
             <img className="logo__icon" src={logo} />
           </div>
-           {/* adding mobile icon */}
 
         </div>
         <ul className={`nav__menu ${isOpen ? "is-open" : ""}` }>
@@ -84,7 +109,7 @@ const Navbar = () => {
           </div>
           
          { show && (
-
+              
               <div className="show-block">
                 <p className="cart-name">Cart</p>
                 {addCounter > 0 ? (
@@ -106,7 +131,7 @@ const Navbar = () => {
                         onClick={() => setAddCounter(0)}
                       />
                     </div>
-                    <button className="cart-checkout">Checkout</button>
+                    <button className="cart-checkout" onClick={() => setCounter(0)}>Checkout</button>
                   </div>
                 ) : (
                   <p className="empty-cart">Your cart is empty</p>
@@ -114,11 +139,7 @@ const Navbar = () => {
                 
               </div>
               
-          )}
-
-
-        
-          
+          )} 
           </OutsideClickHandler>
         </div>
       ))} 

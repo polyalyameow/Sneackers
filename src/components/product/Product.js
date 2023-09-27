@@ -5,20 +5,19 @@ import img1 from "../../images/image-product-1.jpg";
 import img2 from "../../images/image-product-2.jpg";
 import img3 from "../../images/image-product-3.jpg";
 import img4 from "../../images/image-product-4.jpg";
-
 import previous from "../../images/icon-previous.svg";
 import next from "../../images/icon-next.svg";
 
-
 import { useBetween } from "use-between";
 
-
+// collection of images
 const images = [
   { id: 0, value: img1 },
   { id: 1, value: img2 },
   { id: 2, value: img3 },
   { id: 3, value: img4 },
 ];
+
 
 export const useShareableStateCollection = () => {
   const [collection, setCollection] = useState(images[0]);
@@ -36,11 +35,11 @@ const Product = () => {
 
 
   const handleClick = (i) => {
-    console.log(i);
+    console.log(i); // id
     setVal(i);
     const slider = images[i];
     setCollection(slider);
-    console.log(collection);
+    console.log(collection); // id and value of targeted img
   };
 
   const handlePrevious = () => {
