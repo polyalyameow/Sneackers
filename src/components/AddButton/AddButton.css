@@ -25,3 +25,9 @@
 .basket{
     filter: invert(96%) sepia(100%) saturate(1%) hue-rotate(12deg) brightness(104%) contrast(101%);
 }
+
+@media screen and (max-width: 415px){
+    .add-btn{
+        width: 100%;
+    }
+}

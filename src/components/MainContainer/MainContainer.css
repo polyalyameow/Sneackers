@@ -2,14 +2,15 @@
     display: flex;
     justify-content: space-between;
     width: 65.625rem;
-    margin-top: 7%;
-    border: 0.125rem solid pink;
+    /* margin-top: 7%; */
+    /* border: 0.125rem solid pink; */
 }
 
-@media screen and (max-width: 415px) {
+@media screen and (max-width: 539px) {
     .main{
         flex-direction: column;
         align-items: center;
-        margin-top: 2%;
+        margin-top: 3%;
+        width: 100%;
     }
 }

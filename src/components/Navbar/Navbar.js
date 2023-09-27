@@ -69,7 +69,7 @@ const Navbar = () => {
           
           
           <div className="nav__info">
-
+            <div className="basket__content">     
             {addCounter > 0 ? (
               <div className="basket-amount">{addCounter}</div>
             ) : null}
@@ -79,7 +79,7 @@ const Navbar = () => {
               src={basket}
               onClick={() => {setShow((prev) => !prev); setIsOpen(false)}}
             />
-              
+              </div> 
               <img className="info__avatar" src={avatar} />
           </div>
           

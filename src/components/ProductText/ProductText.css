@@ -14,9 +14,7 @@
     justify-content: center;
 }
 
-.counter{
-    margin-right: 2.188rem;
-}
+
 
 /*TEXT*/
 .main__text--logo{
@@ -98,4 +96,39 @@
     justify-content: center;
     align-items: center;
     width: 27.813rem;
+}
+
+@media screen and (max-width: 539px){
+    .main__text {
+        width: 80%;
+        padding-top: 0;
+        font-size: 15px;
+        line-height: 25px;
+    }
+
+    .main__text--title{
+        margin-top: 1rem;
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .price{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    .price--now{
+        width: 40%;
+    }
+
+    .action{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
