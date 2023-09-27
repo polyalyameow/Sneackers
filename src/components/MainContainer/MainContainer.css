@@ -2,9 +2,8 @@
     display: flex;
     justify-content: space-between;
     width: 65.625rem;
-    /* margin-top: 7%; */
-    /* border: 0.125rem solid pink; */
 }
+
 @media screen and (max-width: 1024px){
    .main{
     margin-top: 4rem;

@@ -9,7 +9,6 @@ const MainContainer = () => {
     <div className='main'>
         <Product />
         <ProductText/>
-
     </div>
   )
 }

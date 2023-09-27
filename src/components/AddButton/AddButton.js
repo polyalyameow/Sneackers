@@ -18,7 +18,6 @@ export const useShareableButtonState = () => {
 const AddButton = () => {
   const { counter, setCounter } = useBetween(useShareableState);
   const { addCounter, setAddCounter } = useBetween(useShareableButtonState);
-  // const [addCounter, setAddCounter] = useState(0)
 
   return (
     

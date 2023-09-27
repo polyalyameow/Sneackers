@@ -20,15 +20,13 @@
 .nav__logo{
     cursor: pointer;
     /* border: 2px solid red; */
-
-    height: 100px;
+    height: 6.25rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .logo__icon{
-    /* height: 1.25rem;   */
     width: 8.594rem;
 }
 
@@ -73,8 +71,7 @@
     align-items: center;
     width: 6.25rem;
     justify-content: space-between;
-
-    height: 100px;
+    height: 6.25rem;
 }
 
 #basket{
@@ -118,9 +115,7 @@
     flex-direction: column;
     align-items: center;
     background-color: white;
-    font-family: 'Kumbh Sans', sans-serif;
-    /* justify-content: space-between; */
-    
+    font-family: 'Kumbh Sans', sans-serif;  
 }
 
 .basket__content{
@@ -255,7 +250,6 @@
 
     .mobileIcon{
         display: block;
-        /* padding-right: 0.8rem; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -273,15 +267,13 @@
         /* border: 2px solid green; */
         width: 100%;
         position: absolute;
-        /* padding: 10px; */
         background-color: white;
         display: flex;
         flex-direction: column;
         top: 4.063rem;
-        /* left: 0%; */
         right: 0%;
         height: 100%;
-        border-radius: 10px;
+        border-radius: 0.625rem;
         padding-top: 15%;
         overflow: auto;   
     }
@@ -291,16 +283,16 @@
     .logo-icon__container{
         display: flex;
         justify-content: space-between;
-        width: 170px;
+        width: 10.625rem;
     }
 
     .menu__item{
-        font-size: 30px;
+        font-size: 1.875rem;
         font-weight: bold;
-        line-height: 26px;
+        line-height: 1.625rem;
         color: #1D2026;
-        padding-top: 25px;
-        padding-left: 10px;
+        padding-top: 1.563rem;
+        padding-left: 0.625rem;
 
         
     }
@@ -311,7 +303,7 @@
     }
 
     .show-block{
-        border-radius: 10px;
+        border-radius: 0.625rem;
         margin: 17% auto 0 auto;
         left: 0;
         right: 0;
@@ -336,7 +328,7 @@
 @media screen and (max-width: 539px) 
 {
     .show-block{
-        border-radius: 10px;
+        border-radius: 0.625rem;
         margin: 10% auto 0 auto;
         left: 0;
         right: 0;
@@ -348,7 +340,7 @@
 
 @media screen and (max-width: 281px) {
     .logo-icon__container{
-        width: 140px;
+        width: 8.75rem;
     }
     .logo__icon{
         width: 7rem;
@@ -386,7 +378,7 @@
     }
 
     .menu__item{
-        font-size: 25px;
+        font-size: 1.563rem;
     }
 
 

@@ -29,14 +29,7 @@ export const useShareableStateCollection = () => {
 };
 
 const Product = () => {
-  // const images = [
-  //   {id: 0, value: img1},
-  //   {id: 1, value: img2},
-  //   {id: 2, value: img3},
-  //   {id: 3, value: img4},
-  // ]
 
-  // const [collection, setCollection]=useState(images[0])
   const { collection, setCollection } = useBetween(useShareableStateCollection);
   const [val, setVal] = useState(0);
 
